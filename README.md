@@ -1,2 +1,0 @@
-# alturanova.github.io
-pages
