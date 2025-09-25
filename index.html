@@ -1,21 +1,33 @@
-<script>
-  window.chatwootSettings = {
-    "position": "right",
-    "type": "standard",
-    "launcherTitle": "Chat with us"
-  };
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Munaff Page</title>
+</head>
+<body>
+  <h1>Landing</h1>
 
-  (function(d,t) {
-    var BASE_URL = "https://chat.alturanova.com"; // or your deployed Chatwoot domain
-    var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-    g.src = BASE_URL + "/packs/js/sdk.js";
-    g.defer = true; g.async = true;
-    s.parentNode.insertBefore(g, s);
-    g.onload = function() {
-      window.chatwootSDK.run({
-        websiteToken: 'KzrcvTqz36JzaAvB6TKCuxq8',
-        baseUrl: BASE_URL
-      });
+  <!-- Chatwoot Widget -->
+  <script>
+    window.chatwootSettings = {
+      "position": "right",
+      "type": "standard",
+      "launcherTitle": "Chat with us"
     };
-  })(document, "script");
-</script>
+
+    (function(d,t) {
+      var BASE_URL = "https://chat.alturanova.com"; // or your own Chatwoot deployment
+      var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      g.src = BASE_URL + "/packs/js/sdk.js";
+      g.defer = true; g.async = true;
+      s.parentNode.insertBefore(g, s);
+      g.onload = function() {
+        window.chatwootSDK.run({
+          websiteToken: 'KzrcvTqz36JzaAvB6TKCuxq8',
+          baseUrl: BASE_URL
+        });
+      };
+    })(document, "script");
+  </script>
+</body>
+</html>
